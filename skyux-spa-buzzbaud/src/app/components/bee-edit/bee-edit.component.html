@@ -1,0 +1,15 @@
+<form (submit)="createBee()">
+  <fieldset>
+    <legend>Create a new bee</legend>
+    <input name="title"
+           [(ngModel)]="bee.title"
+           required
+           #title
+           type="text" placeholder="title" >
+    <!-- input #hello  // Is a variable name scoped to the template
+           name="key1" // Is an HTML attribute used by Angular as an id
+           [(ngModel)]="bee.title" // Is the property in the component to bind to
+           type="text" placeholder="title" -->
+    <button>Create bee</button>
+  </fieldset>
+</form>

@@ -7,8 +7,11 @@
   </thead>
   <tbody>
     <tr *ngFor="let bee of bees">
-      <td>{{bee.name}}</td>
-      <td>{{bee.species}}</td>
+      <td [title]="bee.name">{{bee.name}}</td>
+      <td (click)="handleBeeClick(bee)">{{bee.species}}</td>
     </tr>
   </tbody>
 </table>
+<app-bee-detail *ngIf="selectedBee"
+                 [bee]="selectedBee"
+                 (wantsClose)="deselectBee()"></app-bee-detail>
