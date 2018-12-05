@@ -1,0 +1,34 @@
+<dl>
+  <dt>Name:</dt>
+  <dd>{{ bee.name }}</dd>
+  <!-- <dt>Description:</dt>
+  <dd>{{ bee.description }}</dd>
+  <dt>Genius:</dt>
+  <dd>{{ bee.genius }}</dd> -->
+  <dt>Species</dt>
+  <dd>{{bee.species}}</dd>
+  <dt *ngIf=bee.deadly>Deadly</dt>
+  <dd>
+    <span *ngIf=bee.deadly>{{bee.deadly}}</span>
+  </dd>
+  <!-- <dt>Alias</dt>
+  <dd>{{bee.alias}}</dd>
+  <dt>Couumnal</dt>
+  <dd>{{bee.communal}}</dd> -->
+  <dt>Image</dt>
+  <dd><img [src]=bee.image_url></dd>
+  <!-- <dt *ngIf=bee.endangered>Endangered</dt>
+  <dd>
+    <span *ngIf=bee.endangered>{{bee.endangered}}</span>
+  </dd> -->
+  <!-- <dt>id</dt>
+  <dd>{{bee.id}}</dd> -->
+
+
+
+
+  <!-- <dd>
+    <span *ngIf="clue.invalid_count">Yes</span>
+    <span *ngIf="!clue.invalid_count">Yes</span>
+  </dd> -->
+</dl>

@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let clue of cluesOver200">
+      <td [title]="clue.category.title">{{ clue.category.title }}</td>
+      <td (click)="handleClueClick(clue)">${{ clue.value }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-clue-detail *ngIf="selectedClue"
+                 [clue]="selectedClue"
+                 (wantsClose)="deselectClue()"></app-clue-detail>
